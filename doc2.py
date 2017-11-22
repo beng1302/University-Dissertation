@@ -15,7 +15,7 @@ gE = [1]*(N)
 print(E, '\n\n', 'f values:')
 
 xold = np.random.uniform(-xmax, xmax)
-while f >= np.exp(10**(-4)):
+while f >= np.exp(10**(-6)):
     print(f)
     flat_test = 0
     hE = [0]*(N)

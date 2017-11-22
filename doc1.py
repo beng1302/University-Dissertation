@@ -50,7 +50,6 @@ def metropolis(points, iterations, temperature, method, variance):
             else:
                 system_energy += 1/(distance(points[i], points[j]))
     print("starting energy = %f" % system_energy)
-
     for _ in itertools.repeat(None, iterations):
         i = np.random.randint(0, len(points)-1) # Pick a random point from the pointlist
         if method == "uniform": # Generates the compared point by a uniform random distribution
@@ -81,7 +80,6 @@ def metropolis(points, iterations, temperature, method, variance):
                 system_energy -= (old_point_energy-new_point_energy)
                 print("energy up -> current energy = %f, energy change = %f" % (system_energy, 2*(new_point_energy - old_point_energy)))
     print("final energy = %f" % system_energy)
-
     return points
 
 def pointplot(points):
